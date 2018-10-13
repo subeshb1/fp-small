@@ -1,2 +1,2 @@
-# fp-utils
+# fp-small
 A small Functional Programming Library

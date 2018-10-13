@@ -1,5 +1,5 @@
 {
-  "name": "fp-utils",
+  "name": "fp-small",
   "version": "0.0.0-development",
   "description": "A small functional programming library",
   "main": "dist/index.js",
@@ -53,7 +53,7 @@
       "pre-commit": "npm run test"
     }
   },
-  "files":[
+  "files": [
     "dist",
     "README.md"
   ]

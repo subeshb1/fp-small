@@ -2,12 +2,14 @@
   "name": "fp-utils",
   "version": "0.0.0-development",
   "description": "A small functional programming library",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "npx git-cz",
     "test": "jest",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "babel --out-dir dist --ignore *.test.js src",
+    "pre-build": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,15 @@
   "homepage": "https://github.com/subeshb1/fp-utils#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "commitizen": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
     "ghooks": "^2.0.4",
     "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
     "semantic-release": "^15.9.17",
     "travis-deploy-once": "^5.0.9"
   },
@@ -45,5 +52,9 @@
     "ghooks": {
       "pre-commit": "npm run test"
     }
-  }
+  },
+  "files":[
+    "dist",
+    "README.md"
+  ]
 }

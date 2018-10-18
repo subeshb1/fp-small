@@ -13,7 +13,7 @@ export const Right = x => ({
     chain: _ => Left(x),
     ap: _ => Left(x),
     inspect: () => `Left(${x})`
-  });
+  }); 
   
   export const tryCatch = (fn, ...args) => {
     try {

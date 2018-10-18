@@ -1,5 +1,3 @@
-import {Right,Left,fromNullable} from '../Either';
-
 export const curry = fn => {
   const len = fn.length;
   return function $curry(...args) {
@@ -12,6 +10,7 @@ export const curry = fn => {
 export const compose = (...fns) => (...args) =>
   fns.reduceRight((acc, next) => [next.call(null, ...acc)], args)[0];
 
+
  
 
 export const prop = curry((prop, obj) => obj[prop]);
@@ -21,3 +20,4 @@ export const safeProp = curry((p, obj) =>
     prop(p)
   )(obj)
 );
+

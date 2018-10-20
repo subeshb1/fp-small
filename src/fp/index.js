@@ -1,3 +1,4 @@
+import { fromNullable } from "../Either";
 export const curry = fn => {
   const len = fn.length;
   return function $curry(...args) {

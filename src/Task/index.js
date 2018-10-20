@@ -27,7 +27,7 @@ export default class Task {
           fn
         )
       )
-    );
+    ); 
   }
 
   // ----- Applicative (Task a)

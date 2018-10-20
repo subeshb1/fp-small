@@ -12,7 +12,7 @@ class Maybe {
     return this.isNothing ? this : Maybe.of(f(this.x));
   }
   inspect() {
-    return `Maybe(${this.isNothing ? "Nothing" : this.x})`;
+    return  `Maybe(${this.isNothing ? "Nothing" : this.x})`;
   }
   ap(f) {
     return this.isNothing ? this : f.map(this.x);

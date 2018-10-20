@@ -23,5 +23,7 @@ export const Right = x => ({
     }
   };
   
-  export const fromNullable = x => (x == null ? Left() : Right(x));
   
+
+
+  export const fromNullable = x => (x == null ? Left() : Right(x));

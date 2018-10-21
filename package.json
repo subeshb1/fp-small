@@ -10,7 +10,8 @@
     "semantic-release": "semantic-release",
     "build": "babel --out-dir dist --ignore *.test.js src",
     "pre-build": "rimraf dist",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "report-coverage": "cat ./coverage/icov.info | codecov"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "babel-jest": "^23.6.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "codecov.io": "^0.1.6",
     "commitizen": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
     "ghooks": "^2.0.4",
@@ -40,11 +42,7 @@
     "travis-deploy-once": "^5.0.9"
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
+    "collectCoverage": true
   },
   "config": {
     "commitizen": {

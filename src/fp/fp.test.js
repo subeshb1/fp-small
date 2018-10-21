@@ -1,4 +1,4 @@
-import { curry, compose, prop } from ".";
+import { curry, compose } from ".";
 
 describe("Testing Curry", () => {
   it("curries add function", () => {
@@ -15,27 +15,21 @@ describe("Testing Curry", () => {
     expect(mock.mock.calls[1][1]).toBe(10);
 
     expect(curry).toThrow();
-    
   });
 });
 
+describe("Testing Compose", () => {
+  it("composes functions", () => {
+    const add1 = x => x + 1;
+    const mul2 = x => x * 2;
+    const sub1 = x => x - 1;
 
-describe('Testing Compose', () => {
-    it('composes functions', () => {
-        const add1 = x => x+1;
-        const mul2 = x => x*2;
-        const sub1 = x => x - 1;
+    const add1Mul2Sub1 = compose(
+      sub1,
+      mul2,
+      add1
+    );
 
-        const add1Mul2Sub1  = compose(sub1,mul2,add1);
-
-        expect(add1Mul2Sub1(10)).toBe(sub1(mul2(add1(10))));
-    });
-});
-
-describe('Testing prop', () => {
-  it('prop functions', () => {
-      const obj = {name:1};
-
-      expect(prop("name",obj)).toBe(1);
+    expect(add1Mul2Sub1(10)).toBe(sub1(mul2(add1(10))));
   });
 });

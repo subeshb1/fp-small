@@ -9,7 +9,8 @@
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release",
     "build": "babel --out-dir dist --ignore *.test.js src",
-    "pre-build": "rimraf dist"
+    "pre-build": "rimraf dist",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

@@ -12,6 +12,7 @@ describe("Testing Module", () => {
       "curry",
       "filter",
       "firstCapital",
+      "Either",
       "fromCharCode",
       "fromNullable",
       "getCharCode",
@@ -30,7 +31,12 @@ describe("Testing Module", () => {
       "toLower",
       "toUpper",
       "trim",
-      "tryCatch"
+      "tryCatch",
+      "fromTruth",
+      "liftA2",
+      "liftA3",
+      "id",
+      "LazyBox"
     ].sort();
 
     const fpList = [];

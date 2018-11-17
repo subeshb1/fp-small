@@ -22,6 +22,7 @@ describe("Testing Module", () => {
       "join",
       "map",
       "notEmptyString",
+      "mod",
       "prop",
       "replace",
       "safeProp",

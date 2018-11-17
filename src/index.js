@@ -5,6 +5,6 @@ export * from "./fp";
 export * from "./object";
 export * from "./string";
 export * from "./array";
-export * from "./throttle";
+export * from "./utils";
 export * from "./LazyBox";
 export * from "./composition";

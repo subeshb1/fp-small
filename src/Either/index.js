@@ -27,4 +27,4 @@ export const Either = {
 };
 export const fromNullable = x => (x == null ? Left() : Right(x));
 
-export const fromTruth = x => (X ? Right(x) : Left(x));
+export const fromTruth = x => (x ? Right(x) : Left(x));
